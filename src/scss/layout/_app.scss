@@ -19,3 +19,28 @@
   font-size: 92px;
   color: #fff;
 }
+
+#myvideo {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+}
+
+#button {
+  position: fixed;
+  z-index: 30;
+  top: 50%;
+  left: 50px;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid;
+  padding: 5px 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

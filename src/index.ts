@@ -5,6 +5,8 @@ import Vue from 'vue'
 // @ts-ignore
 import App from './components/App.vue'
 
+import SmoothScroll from 'smooth-scroll'
+
 const $ = jQuery
 
 // jqueryで記述可能
@@ -19,7 +21,7 @@ new Vue({
 }).$mount("#app")
 
 const counter: HTMLElement = <HTMLElement>document.getElementById('counter')
-
+const button: HTMLElement = <HTMLElement>document.getElementById('button')
 
 // video
 const video: HTMLVideoElement = <HTMLVideoElement>document.getElementById('myvideo')
@@ -34,10 +36,11 @@ let width = 0
 let height = 0
 
 window.addEventListener('DOMContentLoaded', () => {
-  canvasInit()
   canvasResize()
+  
   setTimeout(() => {
     // video.play()
+    canvasInit()
   }, 100)
 })
 
@@ -95,3 +98,10 @@ function handleScroll() {
     tick = true
   }
 }
+
+
+// button 
+button.addEventListener('click', (el) => {
+  const scroll = new SmoothScroll()
+  scroll.animateScroll(3000);
+})
