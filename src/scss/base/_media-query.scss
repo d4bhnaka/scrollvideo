@@ -1,0 +1,14 @@
+//
+// #Media-query
+//
+
+@mixin mq($breakpoint) {
+    @if map-has-key($my-breakpoints, $breakpoint) {
+        @media #{inspect(map-get($my-breakpoints, $breakpoint))} {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$my-breakpoints` map.";
+    }
+}

@@ -1,0 +1,21 @@
+#mycanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(0, 0, 0);
+}
+
+.scroller {
+  height: 30000px;
+}
+
+#counter {
+  position: fixed;
+  top: 30px;
+  left: 50px;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 92px;
+  color: #fff;
+}

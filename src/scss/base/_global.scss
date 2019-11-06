@@ -1,0 +1,9 @@
+
+$my-breakpoints: (
+    'xs': 'screen and (max-width: 767px)',
+    'sm': 'screen and (min-width: 768px)',
+    'md-down': 'screen and (max-width: 767px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1025px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;

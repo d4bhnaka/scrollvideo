@@ -1,0 +1,35 @@
+
+$key_color: #363636;
+$black: #363636;
+$red: #f57567;
+$blue: #6fafd9;
+$yellow: #dbc325;
+$green: #00ba0d;
+$gray: #eeeeee;
+
+
+$colors: (
+    theme: (
+        base: #363636,
+    ),
+    text: (
+        base: #333,
+        light: #666,
+        dark: #000,
+    ),
+    link: (
+        base: #037fd2,
+        visited: null,
+        hover: lighten(#d20320, 10%),
+    ),
+    bg: (
+        base: #fff,
+        light: #f7f7f7,
+        dark: darken(#fff, 10%),
+    ),
+
+) !default;
+
+@function colors($key, $tone: base) {
+    @return map-get( map-get($colors, $key), $tone);
+}

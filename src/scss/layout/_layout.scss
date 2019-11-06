@@ -1,0 +1,272 @@
+.l-page-wrapper {
+  padding: 70px 0;
+}
+
+.l-container {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 10px;
+  margin: auto;
+  @media (max-width: 767px) {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+.l-container-s {
+  width: 80%;
+  max-width: 720px;
+  padding: 0 10px;
+  margin: auto;
+  @media (max-width: 767px) {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+.l-section {
+  margin: 30px 0;
+  @media (min-width: 768px) {
+    margin: 70px 0;
+  }
+}
+
+.l-section--inner {
+  padding: 15px 5%;
+}
+
+.image-block {
+  margin: 1rem auto;
+  text-align: center;
+  &.narrow {
+    max-width: 530px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    @media (min-width: 768px) {
+      width: auto;
+      margin: auto;
+    }
+  }
+}
+
+.small {
+  font-size: 80%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.pc-only,
+.sp-only {
+  display: none;
+}
+
+.pc-only {
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.sp-only {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.md-rendered {
+  font-size: 3.2vw;
+  line-height: 1.7;
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 4vw;
+    border-left: .25em solid $green;
+    padding-left: .75em;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 1.75em 0 .5em;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  h2 {
+    font-size: 3.4vw;
+    font-weight: 700;
+    margin: .5em 0;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  ol, ul {
+    margin-left: 0;
+    padding-left: 1.25em;
+  }
+  table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    td {
+      border: 1px solid #aaa;
+      padding: .5em .25em;
+      vertical-align: top;
+      &:nth-child(1) {
+        width: 15%;
+      }
+      &:nth-child(3) {
+        width: 15%;
+      }
+    }
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+
+.anchor-link {
+  position: relative;
+  font-size: 90%;
+  font-weight: 400;
+  &::before {
+    content: '＞';
+    display: inline-block;
+    margin-right: .5em;
+  }
+}
+
+dl.data_list {
+  display: flex;
+  margin: .5rem auto;
+  justify-content: space-between;
+  background: $gray;
+  padding: .85rem;
+  max-width: 420px;
+  dt {
+    font-weight: 700;
+    &::before {
+      content: '●';
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+  dd {
+    font-weight: 700;
+  }
+}
+
+.l-button {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  background: #6fafd9;
+  border: 0;
+  padding: 1em;
+  border-radius: .75em;
+  font-size: 3.6vw;
+  margin: 1em auto;
+  width: 90%;
+  max-width: 400px;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.news-list {
+  ul {
+    padding-left: 1em;
+    list-style: none;
+    li {
+      color: $red;
+      font-weight: 700;
+      margin-bottom: 1em;
+      font-size: 90%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '●';
+        display: inline-block;
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+.link-button {
+  display: block;
+  position: relative;
+  text-align: center;
+  color: #fff !important;
+  background: #6fafd9;
+  border: 0;
+  padding: 1em;
+  border-radius: .75em;
+  font-size: 3.6vw;
+  margin: 1em auto;
+  width: 75%;
+  max-width: 280px;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  &::after {
+    content: '>';
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+}
+
+.add-line {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.goods-md {
+  max-width: 960px;
+  margin: auto;
+  h1 {
+    @extend .headline-C;
+  }
+  h2 {
+    @extend .headline-E;
+  }
+  strong {
+    display: inline-block;
+    background: $red;
+    color: #fff;
+    padding: 1px .5em;
+  }
+  blockquote {
+    border: 0;
+    padding: 2em 1.75em;
+    margin: 3em 0;
+    background: #fff9d4;
+    border-radius: 1em;
+  }
+  table {
+    table-layout: fixed;
+    tr {
+      border-bottom: 30px solid transparent;
+    }
+  }
+}

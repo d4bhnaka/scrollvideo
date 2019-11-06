@@ -1,0 +1,172 @@
+html, body {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    color: #363636;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    font-weight: 400;
+    line-height: 1.62;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-kerning: normal;
+
+    @media (max-width: 767px) {
+      font-size: 3.8vw;
+    }
+}
+
+i,
+cite,
+em,
+address,
+dfn {
+    font-style: normal;
+}
+
+p {
+    font-feature-settings: 'palt';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    &:visited {
+      color: colors(link, visited);
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+}
+
+.main a {
+  color: #6fafd9;
+  &:hover {
+    color: #4084b1;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  > ul,
+  > ol {
+      margin-bottom: 0;
+  }
+}
+
+dd {
+  margin-left: 0;
+}
+
+pre {
+  font-weight: normal;
+  font-family: inherit;
+  line-height: inherit;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+blockquote {
+  margin: my-margins() 0 my-margins() 0;
+  padding-left: my-paddings();
+  border-left: 1px solid colors(text, light);
+  color: colors(text, light);
+  & > :first-child {
+      margin-top: 0;
+  }
+  & > :last-child {
+      margin-bottom: 0;
+  }
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0;
+}
+
+label {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
+    padding: 5px 7px;
+    margin: 5px 0;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    border: 1px solid #cdcdcd;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      width: 32rem;
+    }
+}
+
+textarea {
+  width: 100%;
+  min-height: 8rem;
+  padding: 0.5rem 0.5rem;
+  vertical-align: top;
+  resize: vertical;
+  border: 1px solid #cdcdcd;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
